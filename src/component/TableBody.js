@@ -1,15 +1,17 @@
 import React from 'react';
 
-const TableBody = () => {
-    return (
-        <div>
-            <tr>
-                <td></td>
-                <td></td>
-                <td>Delete</td>
+const TableBody = props => {
+    const rows = props.itemData.map((row, index) => {
+        return (
+            <tr key={index}>
+                <td>{row.name}</td>
+                <td>{row.job}</td>
+                <td><button onClick={() => props.removeItems(index)}>Delete</button></td>
             </tr>
-        </div>
-    );
-};
+        );
+    });
+
+    return <tbody>{rows}</tbody>;
+}
 
 export default TableBody;
