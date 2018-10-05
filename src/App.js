@@ -32,12 +32,12 @@ class App extends Component {
       <div className="container text-center">
         <h1>Update the Table</h1>
         <p>Add the Relevant Input</p>
-        <Table
-              itemData={this.state.items}
-              removeItems={this.removeItems}
-        />
         <h3>Add New Record</h3>
             <Form submitQuery={this.submitQuery} />
+        <Table
+               itemData={this.state.items}
+               removeItems={this.removeItems}
+        />
       </div>
     );
   }

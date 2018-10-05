@@ -5,9 +5,10 @@ const TableHeader = () => {
         <div>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Job</th>
-                    <th>Delete</th>
+                    <td>Name</td>
+                    <td>Job</td>
+                    <td>Phone</td>
+                    <td>Delete</td>
                 </tr>
             </thead>
         </div>

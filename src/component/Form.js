@@ -6,7 +6,8 @@ class Form extends Component {
         super(props);
         this.state = {
             name: '',
-            job: ''
+            job: '',
+            Phone: ''
         };
     }
 
@@ -18,6 +19,7 @@ class Form extends Component {
     FormSubmit = () => {
         this.props.submitQuery(this.state);
         this.setState( this.state );
+        this.setState({ name:'', job: '', phone:'' })
     }
 
 
@@ -25,7 +27,7 @@ class Form extends Component {
     render() {
         return (
             <div>
-                <form>
+                <form class="inline">
                     <label>Name</label>
                     <input type="text"
                            name="name"
@@ -36,6 +38,12 @@ class Form extends Component {
                     <input type="text"
                            name="job"
                            value={this.state.job}
+                           onChange={this.handleChange}
+                           />
+                    <label>Phone Number</label>
+                    <input type="text"
+                           name="phone"
+                           value={this.state.phone}
                            onChange={this.handleChange}
                            />
                     <input type="button"

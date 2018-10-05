@@ -6,6 +6,7 @@ const TableBody = props => {
             <tr key={index}>
                 <td>{row.name}</td>
                 <td>{row.job}</td>
+                <td>{row.phone}</td>
                 <td><button onClick={() => props.removeItems(index)}>Delete</button></td>
             </tr>
         );
